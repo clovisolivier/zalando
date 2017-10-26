@@ -1,0 +1,15 @@
+/Users/sivolc/Workspace/java/zalando/src/test/java/helpers/Log.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/step_definitions/RunCukesTest.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/modules/AddProductToShoppingBacket.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/modules/ListProductByNavigationAction.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/helpers/DataHelper.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/pageobjects/AutomationHomePage.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/step_definitions/ShoppingBacketSteps.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/pageobjects/ShoppingBasketPage.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/modules/NavigateToShoppingBacketAction.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/pageobjects/ZapatosCatalogPage.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/pageobjects/BaseClass.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/pageobjects/ProductDetailPage.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/step_definitions/Hooks.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/step_definitions/ProductSelectionSteps.java
+/Users/sivolc/Workspace/java/zalando/src/test/java/modules/SelectProductAction.java
