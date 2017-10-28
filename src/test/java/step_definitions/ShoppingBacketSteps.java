@@ -5,8 +5,6 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import helpers.DataHelper;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import java.util.HashMap;
 import java.util.List;
 

@@ -5,16 +5,19 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import helpers.Log;
 import pageobjects.ProductDetailPage;
 import pageobjects.ShoppingBasketPage;
 
 
-public class AddProductToShoppingBacket {
+public class AddProductToShoppingBacketAction {
 
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
+		Log.startTestCase("AddProductToShoppingBacket");
 
-		ProductDetailPage.size_drop_down.isDisplayed();
-		ProductDetailPage.size_drop_down.click();
+		Log.info("AddProductToShoppingBacket is performed");
+		//ProductDetailPage.size_drop_down.isDisplayed();
+		//ProductDetailPage.size_drop_down.click();
 
 		ProductDetailPage.add_backet_button.click();
 

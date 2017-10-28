@@ -2,6 +2,7 @@ package step_definitions;
 
 import java.net.MalformedURLException;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,8 @@ public class Hooks{
 	 * shared state between tests
 	 */
 	public void openBrowser() throws MalformedURLException {
+		DOMConfigurator.configure("log4j.xml");
+		
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();

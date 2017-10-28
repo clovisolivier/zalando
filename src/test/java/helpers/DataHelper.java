@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class DataHelper {
 
-	public static HashMap<String,String> storeValues = new HashMap();
+	public static HashMap<String,String> storeValues = new HashMap<String, String>();
 
 
 	public static List<HashMap<String,String>> data()
