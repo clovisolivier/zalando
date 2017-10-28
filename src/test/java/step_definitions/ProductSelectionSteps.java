@@ -2,8 +2,8 @@ package step_definitions;
 
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductDetailPage;
+import pageobjects.ProductsCatalogPage;
 import pageobjects.ShoppingBacketPage;
-import pageobjects.ZapatosCatalogPage;
 
 import java.util.HashMap;
 import java.util.List;
@@ -41,14 +41,22 @@ public class ProductSelectionSteps {
 	@When("^I search shoes for men by navigation$")
 	public void i_search_shoes_for_men_by_navigation() throws Throwable {
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ZapatosCatalogPage.class);
+		PageFactory.initElements(driver, ProductsCatalogPage.class);
+
+		ListProductByNavigationAction.Execute(driver,datamap);
+	}
+	
+	@When("^I search bag for women by navigation$")
+	public void i_search_bag_for_women_by_navigation() throws Throwable {
+		PageFactory.initElements(driver, AutomationHomePage.class);
+		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
 
 	@When("^I select a product in the list$")
 	public void i_select_a_product_in_the_list() throws Throwable {
-		PageFactory.initElements(driver, ZapatosCatalogPage.class);
+		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
 		PageFactory.initElements(driver, ProductDetailPage.class);
 
@@ -68,7 +76,7 @@ public class ProductSelectionSteps {
 	public void i_search_for_a_dress_by_research() throws Throwable {
 		Log.info("I search for a dress by research");
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ZapatosCatalogPage.class);
+		PageFactory.initElements(driver, ProductsCatalogPage.class);
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
 	

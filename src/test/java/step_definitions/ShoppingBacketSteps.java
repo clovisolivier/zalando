@@ -11,6 +11,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
 import helpers.Log;
+import modules.CheckIsEmptyShoppingBacketAction;
+import modules.CheckXproductsInShoppingBacketAction;
 import modules.ShoppingBacketAction;
 import pageobjects.AutomationHomePage;
 import pageobjects.ShoppingBacketPage;
@@ -35,8 +37,19 @@ public class ShoppingBacketSteps {
 		ShoppingBacketAction.Execute(driver, datamap);
 	}
 	
+	@When("^I check my shopping backet is empty$")
+	public void i_check_my_shopping_backet_is_empty() throws Throwable {
+		PageFactory.initElements(driver, ShoppingBacketPage.class);
+		
+		CheckIsEmptyShoppingBacketAction.Execute(driver, datamap);
+	}
+	
+	
 	@Then("^I check that I have (\\d+) products in my shopping backet$")
 	public void i_check_that_I_have_products_in_my_shopping_backet(int arg1) throws Throwable {
-	    Log.info("I check that I have (\\\\d+) products in my shopping backet");
-	}
+	    Log.info("I check that I have "+arg1+" products in my shopping backet");
+	    PageFactory.initElements(driver, ShoppingBacketPage.class);
+		
+		CheckXproductsInShoppingBacketAction.Execute(driver, datamap, arg1);
+	}	
 }

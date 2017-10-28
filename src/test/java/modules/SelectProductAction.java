@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 
 import pageobjects.ProductDetailPage;
-import pageobjects.ZapatosCatalogPage;
+import pageobjects.ProductsCatalogPage;
 
 
 public class SelectProductAction {
@@ -14,7 +14,7 @@ public class SelectProductAction {
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
 		
 		
-		ZapatosCatalogPage.first_product.click();
+		ProductsCatalogPage.first_product.click();
 		
 		ProductDetailPage.add_backet_button.isDisplayed();
 			
