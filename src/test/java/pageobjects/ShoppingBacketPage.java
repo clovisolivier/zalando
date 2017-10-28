@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class ShoppingBasketPage extends BaseClass {
+public class ShoppingBacketPage extends BaseClass {
 	
-	public ShoppingBasketPage(WebDriver driver){
+	public ShoppingBacketPage(WebDriver driver){
 		super(driver);
 	}  
 		

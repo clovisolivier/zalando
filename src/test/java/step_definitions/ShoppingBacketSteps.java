@@ -1,12 +1,19 @@
 package step_definitions;
 
 
-import cucumber.api.PendingException;
-import cucumber.api.java.en.Then;
-import helpers.DataHelper;
-import org.openqa.selenium.WebDriver;
 import java.util.HashMap;
 import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import helpers.DataHelper;
+import helpers.Log;
+import modules.ShoppingBacketAction;
+import pageobjects.AutomationHomePage;
+import pageobjects.ShoppingBacketPage;
 
 public class ShoppingBacketSteps {
 
@@ -20,15 +27,16 @@ public class ShoppingBacketSteps {
         datamap = DataHelper.data();
     }
 
-	@Then("^I go in my shopping basket$")
-	public void i_go_in_my_shopping_basket() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@When("^I go in my shopping backet$")
+	public void i_go_in_my_shopping_backet() throws Throwable {
+		PageFactory.initElements(driver, AutomationHomePage.class);
+		PageFactory.initElements(driver, ShoppingBacketPage.class);
+		
+		ShoppingBacketAction.Execute(driver, datamap);
 	}
-
-	@Then("^I check that I have (\\d+) products in my shopping basket$")
-	public void i_check_that_I_have_products_in_my_shopping_basket(int arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	
+	@Then("^I check that I have (\\d+) products in my shopping backet$")
+	public void i_check_that_I_have_products_in_my_shopping_backet(int arg1) throws Throwable {
+	    Log.info("I check that I have (\\\\d+) products in my shopping backet");
 	}
 }

@@ -11,7 +11,7 @@ public class AutomationHomePage extends BaseClass{
 		super(driver);
 	}    
 	
-	@FindBy(how=How.LINK_TEXT, using="Cesta")
+	@FindBy(how=How.XPATH, using="//div[2]/a/span[2]")
 	public static WebElement menu_basket;
 
 	@FindBy(how=How.LINK_TEXT, using="HOMBRE")

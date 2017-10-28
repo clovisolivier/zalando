@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import helpers.Log;
 import pageobjects.ProductDetailPage;
-import pageobjects.ShoppingBasketPage;
+import pageobjects.ShoppingBacketPage;
 
 
 public class AddProductToShoppingBacketAction {
@@ -21,7 +21,7 @@ public class AddProductToShoppingBacketAction {
 
 		ProductDetailPage.add_backet_button.click();
 
-		//	ShoppingBasketPage.shopping_basket_header.isDisplayed();
+		//	ShoppingBacketPage.shopping_basket_header.isDisplayed();
 
 	}
 }

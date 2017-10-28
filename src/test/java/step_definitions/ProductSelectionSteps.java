@@ -2,7 +2,7 @@ package step_definitions;
 
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductDetailPage;
-import pageobjects.ShoppingBasketPage;
+import pageobjects.ShoppingBacketPage;
 import pageobjects.ZapatosCatalogPage;
 
 import java.util.HashMap;
@@ -16,6 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
+import jdk.internal.jline.internal.Log;
 import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
 import modules.SelectProductAction;
@@ -42,7 +43,6 @@ public class ProductSelectionSteps {
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ZapatosCatalogPage.class);
 
-
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
 
@@ -55,23 +55,24 @@ public class ProductSelectionSteps {
 		SelectProductAction.Execute(driver,datamap);
 	}
 
-	@When("^I add this product to the shopping basket$")
-	public void i_add_this_product_to_the_shopping_basket() throws Throwable {
+	@When("^I add this product to the shopping backet$")
+	public void i_add_this_product_to_the_shopping_backet() throws Throwable {
 		PageFactory.initElements(driver, ProductDetailPage.class);
 
-		PageFactory.initElements(driver, ShoppingBasketPage.class);
+		PageFactory.initElements(driver, ShoppingBacketPage.class);
 
 		AddProductToShoppingBacketAction.Execute(driver,datamap);
 	}
 
 	@Then("^I search for a dress by research$")
 	public void i_search_for_a_dress_by_research() throws Throwable {
+		Log.info("I search for a dress by research");
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ZapatosCatalogPage.class);
-
-
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
+	
+
 
 
 
