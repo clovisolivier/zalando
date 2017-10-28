@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3200357126,
+              "duration": 3665082331,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 3,
-        "name": "Add two products to the shopping basket",
+        "name": "Add two distincts products to the shopping backet",
         "description": "",
-        "id": "add-products-in-the-shopping-basket;add-two-products-to-the-shopping-basket",
+        "id": "add-products-in-the-shopping-basket;add-two-distincts-products-to-the-shopping-backet",
         "after": [
           {
             "result": {
-              "duration": 948052860,
+              "duration": 920676557,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3935630135,
+              "duration": 4200260268,
               "status": "passed"
             },
             "line": 4,
@@ -46,19 +46,19 @@
           },
           {
             "result": {
-              "duration": 5924871187,
+              "duration": 6732465408,
               "status": "passed"
             },
             "line": 5,
-            "name": "I search shoes for men by navigation",
+            "name": "I search sunglass for men by navigation",
             "match": {
-              "location": "ProductSelectionSteps.i_search_shoes_for_men_by_navigation()"
+              "location": "ProductSelectionSteps.i_search_sunglass_for_men_by_navigation()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2441063469,
+              "duration": 2870396188,
               "status": "passed"
             },
             "line": 6,
@@ -70,34 +70,64 @@
           },
           {
             "result": {
-              "duration": 116892182,
+              "duration": 1239423400,
               "status": "passed"
             },
             "line": 7,
-            "name": "I add this product to the shopping basket",
+            "name": "I add this product to the shopping backet",
             "match": {
-              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_basket()"
+              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4427082914,
+              "duration": 2875813082,
               "status": "passed"
             },
             "line": 8,
-            "name": "I search for a dress by research",
+            "name": "I go in my shopping backet",
             "match": {
-              "location": "ProductSelectionSteps.i_search_for_a_dress_by_research()"
+              "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2658037719,
+              "duration": 1137918368,
               "status": "passed"
             },
             "line": 9,
+            "name": "I check that I have 1 products in my shopping backet",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 20
+                }
+              ],
+              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7693734220,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I search a complement for men by navigation",
+            "match": {
+              "location": "ProductSelectionSteps.i_search_a_complement_for_men_by_navigation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1557244421,
+              "status": "passed"
+            },
+            "line": 11,
             "name": "I select a product in the list",
             "match": {
               "location": "ProductSelectionSteps.i_select_a_product_in_the_list()"
@@ -106,35 +136,35 @@
           },
           {
             "result": {
-              "duration": 78834686,
+              "duration": 1478485989,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I add this product to the shopping basket",
+            "line": 12,
+            "name": "I add this product to the shopping backet",
             "match": {
-              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_basket()"
+              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 63872510,
-              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat step_definitions.ShoppingBacketSteps.i_go_in_my_shopping_basket(ShoppingBacketSteps.java:26)\n\tat ✽.Then I go in my shopping basket(features/ShoppingBasket.feature:11)\n",
-              "status": "pending"
+              "duration": 2536217048,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I go in my shopping basket",
+            "line": 13,
+            "name": "I go in my shopping backet",
             "match": {
-              "location": "ShoppingBacketSteps.i_go_in_my_shopping_basket()"
+              "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 934065089,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "I check that I have 2 products in my shopping basket",
+            "line": 14,
+            "name": "I check that I have 2 products in my shopping backet",
             "match": {
               "arguments": [
                 {
@@ -142,7 +172,7 @@
                   "offset": 20
                 }
               ],
-              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_basket(int)"
+              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
             },
             "keyword": "And "
           }

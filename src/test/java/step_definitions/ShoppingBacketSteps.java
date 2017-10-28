@@ -12,7 +12,7 @@ import cucumber.api.java.en.When;
 import helpers.DataHelper;
 import helpers.Log;
 import modules.CheckIsEmptyShoppingBacketAction;
-import modules.CheckXproductsInShoppingBacketAction;
+import modules.CheckXDistinctsProductsInShoppingBacketAction;
 import modules.ShoppingBacketAction;
 import pageobjects.AutomationHomePage;
 import pageobjects.ShoppingBacketPage;
@@ -50,6 +50,6 @@ public class ShoppingBacketSteps {
 	    Log.info("I check that I have "+arg1+" products in my shopping backet");
 	    PageFactory.initElements(driver, ShoppingBacketPage.class);
 		
-		CheckXproductsInShoppingBacketAction.Execute(driver, datamap, arg1);
+		CheckXDistinctsProductsInShoppingBacketAction.Execute(driver, datamap, arg1);
 	}	
 }

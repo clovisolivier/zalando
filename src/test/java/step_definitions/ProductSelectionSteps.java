@@ -19,6 +19,8 @@ import helpers.DataHelper;
 import jdk.internal.jline.internal.Log;
 import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
+import modules.ListProductByResearchAction;
+import modules.ListProductBySubMenuNavigationAction;
 import modules.SelectProductAction;
 
 
@@ -38,26 +40,33 @@ public class ProductSelectionSteps {
 		driver.get("http://zalando.es");
 	}
 
-	@When("^I search shoes for men by navigation$")
-	public void i_search_shoes_for_men_by_navigation() throws Throwable {
+	@When("^I search a complement for men by navigation$")
+	public void i_search_a_complement_for_men_by_navigation() throws Throwable {
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
 	
-	@When("^I search bag for women by navigation$")
+	@When("^I search sunglass for men by navigation$")
+	public void i_search_sunglass_for_men_by_navigation() throws Throwable {
+		PageFactory.initElements(driver, AutomationHomePage.class);
+		PageFactory.initElements(driver, ProductsCatalogPage.class);
+
+		ListProductBySubMenuNavigationAction.Execute(driver,datamap);
+	}
+
+	@When("^I search bag for women by research$")
 	public void i_search_bag_for_women_by_navigation() throws Throwable {
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
-		ListProductByNavigationAction.Execute(driver,datamap);
+		ListProductByResearchAction.Execute(driver,datamap);
 	}
 
 	@When("^I select a product in the list$")
 	public void i_select_a_product_in_the_list() throws Throwable {
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
-
 		PageFactory.initElements(driver, ProductDetailPage.class);
 
 		SelectProductAction.Execute(driver,datamap);
@@ -65,23 +74,12 @@ public class ProductSelectionSteps {
 
 	@When("^I add this product to the shopping backet$")
 	public void i_add_this_product_to_the_shopping_backet() throws Throwable {
+		
 		PageFactory.initElements(driver, ProductDetailPage.class);
-
 		PageFactory.initElements(driver, ShoppingBacketPage.class);
 
 		AddProductToShoppingBacketAction.Execute(driver,datamap);
 	}
-
-	@Then("^I search for a dress by research$")
-	public void i_search_for_a_dress_by_research() throws Throwable {
-		Log.info("I search for a dress by research");
-		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ProductsCatalogPage.class);
-		ListProductByNavigationAction.Execute(driver,datamap);
-	}
-	
-
-
 
 
 }

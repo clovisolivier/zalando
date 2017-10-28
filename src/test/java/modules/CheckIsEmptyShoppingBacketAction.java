@@ -13,8 +13,8 @@ import pageobjects.ShoppingBacketPage;
 
 public class CheckIsEmptyShoppingBacketAction {
 
-public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
+	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
 		Log.info(ShoppingBacketPage.shopping_basket_header.getText());
 		assertEquals("CESTA", ShoppingBacketPage.shopping_basket_header.getText());
-		}
+	}
 }

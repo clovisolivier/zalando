@@ -25,6 +25,12 @@ public class AutomationHomePage extends BaseClass{
 	public static WebElement menu_complements;
 	
 	
+	@FindBy(how=How.XPATH, using="(//a[contains(text(),'Gafas de sol')])[2]")
+	public static WebElement sub_menu_sunglass;
+	
+	@FindBy(how=How.XPATH, using="/html/body/div[2]/div[2]/div/div/z-grid/z-grid-item/header/div/nav/div[3]/div/div/div[3]/div/a/div")
+	public static WebElement popup_Shooping_backet;
+	
 	
 	@FindBy(how=How.NAME, using="q")
 	public static WebElement search;

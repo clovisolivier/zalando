@@ -1,6 +1,7 @@
 package step_definitions;
 
 import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.OutputType;
@@ -28,6 +29,9 @@ public class Hooks{
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 	}
 
@@ -50,7 +54,7 @@ public class Hooks{
 
 		}
 		driver.quit();
-
+		
 	}
 
 }

@@ -4,24 +4,28 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helpers.Log;
 import pageobjects.ProductDetailPage;
-import pageobjects.ShoppingBacketPage;
 
 
 public class AddProductToShoppingBacketAction {
 
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
-		Log.startTestCase("AddProductToShoppingBacket");
+		
+		Log.info("ProductDetailPage.add_backet_button.isDisplayed();");
+		ProductDetailPage.add_backet_button.isDisplayed();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));
 
-		Log.info("AddProductToShoppingBacket is performed");
-		//ProductDetailPage.size_drop_down.isDisplayed();
-		//ProductDetailPage.size_drop_down.click();
-
-		ProductDetailPage.add_backet_button.click();
-
-		//	ShoppingBacketPage.shopping_basket_header.isDisplayed();
+		Log.info("WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));");
+		clickableElement.click();	
+		
+		Log.info("ProductDetailPage.add_backet_button.click();");
 
 	}
 }
