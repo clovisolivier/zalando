@@ -20,6 +20,10 @@ public class AutomationHomePage extends BaseClass{
 	@FindBy(how=How.LINK_TEXT, using="Zapatos")
 	public static WebElement menu_zapatos;
 	
+
+	@FindBy(how=How.LINK_TEXT, using="Complementos")
+	public static WebElement menu_complements;
+	
 	@FindBy(how=How.NAME, using="q")
 	public static WebElement search;
 

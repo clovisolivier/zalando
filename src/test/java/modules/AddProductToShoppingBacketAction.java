@@ -21,7 +21,7 @@ public class AddProductToShoppingBacketAction {
 
 		ProductDetailPage.add_backet_button.click();
 
-		ShoppingBasketPage.shopping_basket_header.isDisplayed();
+		//	ShoppingBasketPage.shopping_basket_header.isDisplayed();
 
 	}
 }

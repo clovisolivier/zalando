@@ -16,7 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
-import modules.AddProductToShoppingBacket;
+import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
 import modules.SelectProductAction;
 
@@ -61,7 +61,7 @@ public class ProductSelectionSteps {
 
 		PageFactory.initElements(driver, ShoppingBasketPage.class);
 
-		AddProductToShoppingBacket.Execute(driver,datamap);
+		AddProductToShoppingBacketAction.Execute(driver,datamap);
 	}
 
 	@Then("^I search for a dress by research$")
