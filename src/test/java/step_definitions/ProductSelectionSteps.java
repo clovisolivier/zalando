@@ -16,7 +16,6 @@ import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
-import jdk.internal.jline.internal.Log;
 import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
 import modules.ListProductByResearchAction;

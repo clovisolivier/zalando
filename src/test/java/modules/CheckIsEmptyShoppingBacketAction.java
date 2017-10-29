@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
-import jdk.internal.jline.internal.Log;
+import helpers.Log;
 import pageobjects.ShoppingBacketPage;
 
 public class CheckIsEmptyShoppingBacketAction {
