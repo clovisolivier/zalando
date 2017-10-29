@@ -20,4 +20,10 @@ public class ProductDetailPage extends BaseClass {
 	@FindBy(how=How.XPATH, using="//*[@id=\"zvui-size-select-dropdown-17429-value-item\"]/div/div/div/span")
 	public static WebElement selected_size_drop_down;
 	
+	@FindBy(how=How.XPATH, using="/html/body/div[2]/div[4]/div/div/div/z-grid[1]/z-grid-item[2]/div[1]/div/div[1]/h1/span")
+	public static WebElement product_label;
+	
+	@FindBy(how=How.XPATH, using="/html/body/div[2]/div[4]/div/div/div/z-grid[1]/z-grid-item[2]/div[1]/div/div[2]/div/span[2]")
+	public static WebElement product_price;
+	
 }

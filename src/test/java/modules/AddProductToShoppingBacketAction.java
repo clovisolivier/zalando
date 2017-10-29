@@ -22,6 +22,14 @@ public class AddProductToShoppingBacketAction {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));
 
+		ProductDetailPage.product_label.isDisplayed();
+		
+		Log.info("Label : " + ProductDetailPage.product_label.getText());
+		
+		ProductDetailPage.product_price.isDisplayed();
+		
+		Log.info("Price : " + ProductDetailPage.product_price.getText());
+		
 		Log.info("WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));");
 		clickableElement.click();	
 		

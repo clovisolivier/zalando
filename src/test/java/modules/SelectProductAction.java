@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helpers.Log;
-import pageobjects.ProductDetailPage;
 import pageobjects.ProductsCatalogPage;
 
 
@@ -25,8 +24,10 @@ public class SelectProductAction {
 		wait.until(ExpectedConditions.elementToBeClickable(first_element));
 
 		Log.info("ProductsCatalogPage.first_product.isDisplayed();");
+		
 		WebElement clickable = first_element.findElement(By.xpath("div/a"));
 		wait.until(ExpectedConditions.elementToBeClickable(clickable));
+		
 		Log.info("wait.until(ExpectedConditions.elementToBeClickable(clickable));");
 		clickable.click();
 			
