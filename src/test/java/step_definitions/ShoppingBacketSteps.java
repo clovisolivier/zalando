@@ -1,6 +1,6 @@
 package step_definitions;
 
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -11,22 +11,25 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
 import helpers.Log;
+import models.Product;
 import modules.CheckIsEmptyShoppingBacketAction;
 import modules.CheckXDistinctsProductsInShoppingBacketAction;
 import modules.ShoppingBacketAction;
 import pageobjects.AutomationHomePage;
-import pageobjects.ShoppingBacketPage;
+import pageobjects.ShoppingBacketPage; 
 
 public class ShoppingBacketSteps {
 
     public WebDriver driver;
     public List<HashMap<String,String>> datamap;
 
+	public ArrayList<Product> list_products ;
 
     public ShoppingBacketSteps()
     {
         driver = Hooks.driver;
         datamap = DataHelper.data();
+		list_products = Hooks.list_products;
     }
 
 	@When("^I go in my shopping backet$")
@@ -39,7 +42,7 @@ public class ShoppingBacketSteps {
 	
 	@When("^I check my shopping backet is empty$")
 	public void i_check_my_shopping_backet_is_empty() throws Throwable {
-		PageFactory.initElements(driver, ShoppingBacketPage.class);
+		PageFactory.initElements(driver, ShoppingBacketPage.class); 
 		
 		CheckIsEmptyShoppingBacketAction.Execute(driver, datamap);
 	}
@@ -50,6 +53,6 @@ public class ShoppingBacketSteps {
 	    Log.info("I check that I have "+arg1+" products in my shopping backet");
 	    PageFactory.initElements(driver, ShoppingBacketPage.class);
 		
-		CheckXDistinctsProductsInShoppingBacketAction.Execute(driver, datamap, arg1);
+		CheckXDistinctsProductsInShoppingBacketAction.Execute(driver, datamap, list_products);
 	}	
 }

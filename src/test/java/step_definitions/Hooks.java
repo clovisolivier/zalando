@@ -1,6 +1,8 @@
 package step_definitions;
 
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
@@ -15,8 +17,12 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import helpers.Log;
 
+import models.Product;
+
+
 public class Hooks{
 	public static WebDriver driver;
+	public static ArrayList<Product> list_products = new ArrayList<Product>();
 
 	@Before
 	/**
@@ -38,7 +44,7 @@ public class Hooks{
 
 
 	@After
-	/**
+	/** 
 	 * Embed a screenshot in test report if test is marked as failed
 	 */
 	public void embedScreenshot(Scenario scenario) {

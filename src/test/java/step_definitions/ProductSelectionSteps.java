@@ -3,8 +3,9 @@ package step_definitions;
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductDetailPage;
 import pageobjects.ProductsCatalogPage;
-import pageobjects.ShoppingBacketPage;
+import pageobjects.ShoppingBacketPage; 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
+import models.Product;
 import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
 import modules.ListProductByResearchAction;
@@ -27,11 +29,14 @@ public class ProductSelectionSteps {
 	public WebDriver driver;
 	public List<HashMap<String,String>> datamap;
 
+	public ArrayList<Product> list_products ;
+
 
 	public ProductSelectionSteps()
 	{
 		driver = Hooks.driver;
 		datamap = DataHelper.data();
+		list_products = Hooks.list_products;
 	}
 
 	@When("^I open zalando website$")
@@ -77,7 +82,7 @@ public class ProductSelectionSteps {
 		PageFactory.initElements(driver, ProductDetailPage.class);
 		PageFactory.initElements(driver, ShoppingBacketPage.class);
 
-		AddProductToShoppingBacketAction.Execute(driver,datamap);
+		AddProductToShoppingBacketAction.Execute(driver,datamap, list_products );
 	}
 
 
