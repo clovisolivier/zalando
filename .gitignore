@@ -4,3 +4,5 @@
 	.settings/
 	logfile.log
 	target/*
+/target/
+/bin/

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.runtime.Utils;
 import helpers.Log;
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductsCatalogPage;
@@ -16,17 +17,25 @@ public class ListProductBySubMenuNavigationAction {
 
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
 		
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		AutomationHomePage.menu_men.click();
-		AutomationHomePage.menu_complements.click();
-		AutomationHomePage.sub_menu_sunglass.click();
+		WebDriverWait wait = new WebDriverWait(driver,10);	
 		
-		wait.until(ExpectedConditions.elementToBeClickable(ProductsCatalogPage.first_product));
+		WebElement menu_men = AutomationHomePage.menu_men();
+		menu_men.click();
 		
-		Log.info("WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));");
-			
-		ProductsCatalogPage.category_name.isDisplayed();
-		ProductsCatalogPage.first_product.isDisplayed();
+		WebElement menu_complements = AutomationHomePage.menu_complements();
+		menu_complements.click();
+		
+
+		WebElement sub_menu_sunglass = AutomationHomePage.sub_menu_sunglass();
+		sub_menu_sunglass.click();
+		
+		WebElement first_product = ProductsCatalogPage.list_product_index(0);
+		wait.until(ExpectedConditions.elementToBeClickable(first_product));
+		
+		WebElement category_name = ProductsCatalogPage.category_name();
+		category_name.isDisplayed();
+		
+		first_product.isDisplayed();
 		
 		}
 }

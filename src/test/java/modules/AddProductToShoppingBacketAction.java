@@ -16,24 +16,25 @@ public class AddProductToShoppingBacketAction {
 
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map) throws Exception{
 		
-		Log.info("ProductDetailPage.add_backet_button.isDisplayed();");
-		ProductDetailPage.add_backet_button.isDisplayed();
+		
+		WebElement add_backet_button = ProductDetailPage.add_backet_button();
+		add_backet_button.isDisplayed();
 		
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));
+		WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(add_backet_button));
 
-		ProductDetailPage.product_label.isDisplayed();
+		WebElement product_label = ProductDetailPage.product_label();
+		product_label.isDisplayed();
 		
-		Log.info("Label : " + ProductDetailPage.product_label.getText());
+		Log.info("Label : " + product_label.getText());
 		
-		ProductDetailPage.product_price.isDisplayed();
+		WebElement product_price = ProductDetailPage.product_price();
+		product_price.isDisplayed();
 		
-		Log.info("Price : " + ProductDetailPage.product_price.getText());
+		Log.info("Price : " + product_price.getText());
 		
-		Log.info("WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(ProductDetailPage.add_backet_button));");
 		clickableElement.click();	
 		
-		Log.info("ProductDetailPage.add_backet_button.click();");
 
 	}
 }

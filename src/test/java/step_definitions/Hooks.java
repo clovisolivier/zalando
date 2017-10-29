@@ -13,10 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import helpers.Log;
 
 public class Hooks{
 	public static WebDriver driver;
-
 
 	@Before
 	/**
@@ -25,6 +25,7 @@ public class Hooks{
 	 */
 	public void openBrowser() throws MalformedURLException {
 		DOMConfigurator.configure("log4j.xml");
+		Log.startTestCase();
 		
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -42,6 +43,7 @@ public class Hooks{
 	 */
 	public void embedScreenshot(Scenario scenario) {
 
+		Log.endTestCase();
 		if(scenario.isFailed()) {
 			try {
 				scenario.write("Current Page URL is " + driver.getCurrentUrl());

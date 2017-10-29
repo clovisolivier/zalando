@@ -19,16 +19,15 @@ public class SelectProductAction {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 	
-		WebElement first_element = ProductsCatalogPage.list_product.get(0);
+		List<WebElement> list_product = ProductsCatalogPage.list_product();
+		WebElement first_element = list_product.get(0);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(first_element));
 
-		Log.info("ProductsCatalogPage.first_product.isDisplayed();");
 		
 		WebElement clickable = first_element.findElement(By.xpath("div/a"));
 		wait.until(ExpectedConditions.elementToBeClickable(clickable));
 		
-		Log.info("wait.until(ExpectedConditions.elementToBeClickable(clickable));");
 		clickable.click();
 			
 		}
