@@ -1,7 +1,0 @@
-helpers/Log.class
-step_definitions/Hooks.class
-helpers/DataHelper.class
-pageobjects/ZapatosCatalogPage.class
-pageobjects/AutomationHomePage.class
-step_definitions/RunCukesTest.class
-pageobjects/BaseClass.class
