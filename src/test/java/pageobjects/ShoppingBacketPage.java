@@ -48,7 +48,7 @@ public class ShoppingBacketPage extends BaseClass {
 		return element;
 	}
 	
-	public static WebElement shopping_basket_product_index_price(int index) throws Exception{
+	public static WebElement shopping_basket_product_index_libel(int index) throws Exception{
 		try{ 
 			element = shopping_basket_product_index(index).findElement(By.xpath(".//z-grid[1]/z-grid-item[2]/div/div[1]"));	
 			Log.info("Price for product "+index+" is found on the page");
@@ -59,7 +59,7 @@ public class ShoppingBacketPage extends BaseClass {
 		return element;
 	}
 	
-	public static WebElement shopping_basket_product_index_libel(int index) throws Exception{
+	public static WebElement shopping_basket_product_index_price(int index) throws Exception{
 		try{ 
 			element = shopping_basket_product_index(index).findElement(By.xpath(".//z-grid[1]/z-grid-item[2]/div/div[4]/div/span"));	
 			Log.info("Price for product "+index+" is found on the page");

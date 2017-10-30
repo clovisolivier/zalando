@@ -38,7 +38,7 @@ public class Hooks{
 		driver.manage().window().maximize();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		
 	}
 

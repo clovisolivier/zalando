@@ -8,11 +8,13 @@ public class Product{
 	public Product(String libel, String price){
 		this.libel = libel;
 		this.price = price;
-		
-
 	}
 	
-	public boolean equals(Product product){
-		   return ((this.libel.equals(product.libel)) && (this.price.equals(product.price)));
+	public boolean equals(Object product){
+		return (this.libel.equals(((Product)product).libel) && (this.price.equals(((Product)product).price)));
+	}
+	
+	public String toString(){
+		return "libel : " + this.libel + " ,price : " + this.price;
 	}
 }
