@@ -36,6 +36,17 @@ public class ProductsCatalogPage extends BaseClass {
 		return element;
 	}
 	
+
+	public static WebElement clickable_product(int index) throws Exception{
+		try{ 
+		 element = list_product().get(index).findElement(By.xpath("div/a"));
+			Log.info("My clickable_product is found on the page " );
+		}catch (Exception e){
+			Log.error("My clickable_product is not found on the page");
+			throw(e);
+		}
+		return element;
+	}
 	
 	public static List<WebElement> list_product() throws Exception{
 		try{ 
