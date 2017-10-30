@@ -1,8 +1,8 @@
 .DS_Store
-	.classpath
-	.project
-	.settings/
-	logfile.log
-	target/*
-/target/
+.classpath
+.project
+.settings/
+logfile.log
+target/**
+/target/*
 /bin/
