@@ -20,6 +20,14 @@ cd zalando
 mvn clean install
 ```
 
+## Execution reports
+
+The testing execution generate reports in file ./target
+
+## Execution Log
+
+Log of the execution are stored in file ./logfile.log
+
 ## Comments
 
 * On the product detail page, I did not succeed to interact with the drop down selector used for the size selection. 

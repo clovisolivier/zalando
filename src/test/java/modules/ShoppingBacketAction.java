@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.AutomationHomePage;
+import pageobjects.ShoppingBacketPage;
 
 
 
@@ -25,6 +26,8 @@ public class ShoppingBacketAction {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_popup_shooping_backet));
 		
 		menu_popup_shooping_backet.click();
+		
+		ShoppingBacketPage.main_element.isDisplayed();
 		
 		
 		}
