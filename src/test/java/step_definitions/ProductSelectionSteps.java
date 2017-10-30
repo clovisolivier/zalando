@@ -14,9 +14,9 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.DataHelper;
+import helpers.Log;
 import models.Product;
 import modules.AddProductToShoppingBacketAction;
 import modules.ListProductByNavigationAction;
@@ -41,11 +41,14 @@ public class ProductSelectionSteps {
 
 	@When("^I open zalando website$")
 	public void i_open_zalando_website() throws Throwable {
+		Log.info("I open zalando website");
 		driver.get("http://zalando.es");
 	}
 
 	@When("^I search a complement for men by navigation$")
 	public void i_search_a_complement_for_men_by_navigation() throws Throwable {
+		Log.info("I search a complement for men by navigation");
+		
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
@@ -54,6 +57,7 @@ public class ProductSelectionSteps {
 	
 	@When("^I search sunglass for men by navigation$")
 	public void i_search_sunglass_for_men_by_navigation() throws Throwable {
+		Log.info("I search sunglass for men by navigation");
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
@@ -62,6 +66,8 @@ public class ProductSelectionSteps {
 
 	@When("^I search bag for women by research$")
 	public void i_search_bag_for_women_by_navigation() throws Throwable {
+
+		Log.info("I search bag for women by research");
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
@@ -70,6 +76,8 @@ public class ProductSelectionSteps {
 
 	@When("^I select a product in the list$")
 	public void i_select_a_product_in_the_list() throws Throwable {
+
+		Log.info("I select a product in the list");
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
 		PageFactory.initElements(driver, ProductDetailPage.class);
 
@@ -78,6 +86,8 @@ public class ProductSelectionSteps {
 
 	@When("^I add this product to the shopping backet$")
 	public void i_add_this_product_to_the_shopping_backet() throws Throwable {
+
+		Log.info("I add this product to the shopping backet");
 		
 		PageFactory.initElements(driver, ProductDetailPage.class);
 		PageFactory.initElements(driver, ShoppingBacketPage.class);

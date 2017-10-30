@@ -12,7 +12,6 @@ import cucumber.api.java.en.When;
 import helpers.DataHelper;
 import helpers.Log;
 import models.Product;
-import modules.CheckIsEmptyShoppingBacketAction;
 import modules.CheckXDistinctsProductsInShoppingBacketAction;
 import modules.ShoppingBacketAction;
 import pageobjects.AutomationHomePage;
@@ -34,19 +33,14 @@ public class ShoppingBacketSteps {
 
 	@When("^I go in my shopping backet$")
 	public void i_go_in_my_shopping_backet() throws Throwable {
+		Log.info("I go in my shopping backet");
+		
 		PageFactory.initElements(driver, AutomationHomePage.class);
 		PageFactory.initElements(driver, ShoppingBacketPage.class);
 		
 		ShoppingBacketAction.Execute(driver, datamap);
 	}
-	
-	@When("^I check my shopping backet is empty$")
-	public void i_check_my_shopping_backet_is_empty() throws Throwable {
-		PageFactory.initElements(driver, ShoppingBacketPage.class); 
-		
-		CheckIsEmptyShoppingBacketAction.Execute(driver, datamap);
-	}
-	
+
 	
 	@Then("^I check that I have (\\d+) products in my shopping backet$")
 	public void i_check_that_I_have_products_in_my_shopping_backet(int arg1) throws Throwable {

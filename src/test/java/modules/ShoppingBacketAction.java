@@ -23,6 +23,7 @@ public class ShoppingBacketAction {
 		WebElement menu_popup_shooping_backet = AutomationHomePage.menu_popup_shooping_backet();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(menu_popup_shooping_backet));
+		
 		menu_popup_shooping_backet.click();
 		
 		

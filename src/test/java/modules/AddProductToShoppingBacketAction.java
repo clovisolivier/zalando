@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import helpers.Log;
 import pageobjects.ProductDetailPage;
 
 import models.Product;
@@ -33,9 +32,7 @@ public class AddProductToShoppingBacketAction {
 
 		Product product_storage = new Product(product_label.getText(), product_price.getText());
 		
-		//if (!product_list.contains(product_storage)){
-			product_list.add(product_storage);
-		//}
+		product_list.add(product_storage);
 		
 		clickableElement.click();	
 		

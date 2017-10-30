@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helpers.Log;
 import models.Product;
@@ -19,7 +18,6 @@ public class CheckXDistinctsProductsInShoppingBacketAction {
 	public static void Execute(WebDriver driver,List<HashMap<String,String>> map, ArrayList<Product> listProducts) throws Exception{
 
 
-		WebDriverWait wait = new WebDriverWait(driver,10);
 		int nbProductsAddedToBacket = ShoppingBacketPage.shopping_basket_product_count();
 		int nbDistinctsProducts = ShoppingBacketPage.shopping_basket_distinct_product_count();
 		int nbProducts =  listProducts.size();
@@ -69,7 +67,7 @@ public class CheckXDistinctsProductsInShoppingBacketAction {
 
 		//Check the shopping backet total amount
 		WebElement totalPrice = ShoppingBacketPage.shopping_basket_total();
-		Log.info("totalPrice "+ Product.convertToDouble(totalPrice.getText()));
+		
 		assert(Product.convertToDouble(totalPrice.getText()) == backetPrice);
 
 	}

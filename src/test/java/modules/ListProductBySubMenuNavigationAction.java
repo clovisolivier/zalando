@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import cucumber.runtime.Utils;
-import helpers.Log;
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductsCatalogPage;
 

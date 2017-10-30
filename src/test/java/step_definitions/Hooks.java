@@ -2,7 +2,6 @@ package step_definitions;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
