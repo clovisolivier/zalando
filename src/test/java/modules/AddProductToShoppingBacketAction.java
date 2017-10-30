@@ -33,7 +33,9 @@ public class AddProductToShoppingBacketAction {
 
 		Product product_storage = new Product(product_label.getText(), product_price.getText());
 		
-		product_list.add(product_storage);
+		//if (!product_list.contains(product_storage)){
+			product_list.add(product_storage);
+		//}
 		
 		clickableElement.click();	
 		

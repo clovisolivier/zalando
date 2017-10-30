@@ -22,7 +22,7 @@ import models.Product;
 
 public class Hooks{
 	public static WebDriver driver;
-	public static ArrayList<Product> list_products = new ArrayList<Product>();
+	public static ArrayList<Product> list_products ;
 
 	@Before
 	/**
@@ -30,8 +30,12 @@ public class Hooks{
 	 * shared state between tests
 	 */
 	public void openBrowser() throws MalformedURLException {
+		
 		DOMConfigurator.configure("log4j.xml");
+		
 		Log.startTestCase();
+		
+		list_products = new ArrayList<Product>();
 		
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -53,7 +57,6 @@ public class Hooks{
 		if(scenario.isFailed()) {
 			try {
 				scenario.write("Current Page URL is " + driver.getCurrentUrl());
-				//            byte[] screenshot = getScreenshotAs(OutputType.BYTES);
 				byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshot, "image/png");
 			} catch (WebDriverException somePlatformsDontSupportScreenshots) {

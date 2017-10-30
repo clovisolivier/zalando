@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,23 +16,61 @@ import pageobjects.ShoppingBacketPage;
 
 
 public class CheckXDistinctsProductsInShoppingBacketAction {
-	public static void Execute(WebDriver driver,List<HashMap<String,String>> map, ArrayList<Product> list_products) throws Exception{
+	public static void Execute(WebDriver driver,List<HashMap<String,String>> map, ArrayList<Product> listProducts) throws Exception{
+
 
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		List<WebElement> shopping_basket_products = ShoppingBacketPage.shopping_basket_products();
-		int size = shopping_basket_products.size();
+		int nbProductsAddedToBacket = ShoppingBacketPage.shopping_basket_product_count();
+		int nbDistinctsProducts = ShoppingBacketPage.shopping_basket_distinct_product_count();
+		int nbProducts =  listProducts.size();
 
-		int nbProducts =  list_products.size();
-		 
 		//Count the number of products registered
-		Log.info("Nb Product(s) in shopping backet : "+size);
-		assertEquals(nbProducts, size); 
-		for (int i = 0;i < size; i++){
+		int nbProductInBacket =0;
+		double backetPrice = 0;
+
+		assertEquals(nbProducts, nbProductsAddedToBacket); 
+
+		for (int i = 0;i < nbDistinctsProducts; i++){
+			double cumulPrice = 0;
+
 			WebElement libel = ShoppingBacketPage.shopping_basket_product_index_libel(i);
 			WebElement price = ShoppingBacketPage.shopping_basket_product_index_price(i);
 			Product product = new Product(libel.getText(),price.getText());
-			assert(list_products.contains(product));
+
+			int selected =Integer.parseInt(ShoppingBacketPage.shopping_basket_product_index_selected(i));
+
+			//Count of products in shopping backet
+			nbProductInBacket = nbProductInBacket + selected;
+
+			//Check product has been added
+			assert(listProducts.contains(product));
+
+			Product stored = listProducts.get(listProducts.lastIndexOf(product));
+			
+			//If the same product has been added in the shopping backet more than one time
+			if( selected > 1 ){
+				
+				cumulPrice = stored.price * selected;
+				Log.info("product.price "+product.price+ ", cumul_price "+cumulPrice);
+
+			}else{
+				cumulPrice = stored.price;
+			}
+			
+			//Add total price of this product
+			backetPrice = backetPrice +cumulPrice;
+			
+			//Check amount for this product
+			assert(product.price == cumulPrice);
 		}
+
+		//Check that the number of products in shopping backet is the consistent 
+		assertEquals(nbProductInBacket, nbProductsAddedToBacket);
+
+		//Check the shopping backet total amount
+		WebElement totalPrice = ShoppingBacketPage.shopping_basket_total();
+		Log.info("totalPrice "+ Product.convertToDouble(totalPrice.getText()));
+		assert(Product.convertToDouble(totalPrice.getText()) == backetPrice);
 
 	}
 }
