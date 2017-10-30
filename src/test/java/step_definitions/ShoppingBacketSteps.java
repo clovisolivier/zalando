@@ -42,9 +42,9 @@ public class ShoppingBacketSteps {
 	}
 
 	
-	@Then("^I check that I have (\\d+) products in my shopping backet$")
-	public void i_check_that_I_have_products_in_my_shopping_backet(int arg1) throws Throwable {
-	    Log.info("I check that I have "+arg1+" products in my shopping backet");
+	@Then("^I check that I have all products in my shopping backet$")
+	public void i_check_that_I_have_all_products_in_my_shopping_backet() throws Throwable {
+	    Log.info("I check that I have all products in my shopping backet");
 	    PageFactory.initElements(driver, ShoppingBacketPage.class);
 		
 		CheckXDistinctsProductsInShoppingBacketAction.Execute(driver, datamap, list_products);

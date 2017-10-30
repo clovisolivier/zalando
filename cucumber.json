@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 4855141601,
+              "duration": 4125887851,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 1002592814,
+              "duration": 655328331,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8082896716,
+              "duration": 7943215375,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 7514759657,
+              "duration": 6800730233,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 5183921234,
+              "duration": 5409125382,
               "status": "passed"
             },
             "line": 8,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 762692084,
+              "duration": 845041930,
               "status": "passed"
             },
             "line": 9,
@@ -82,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 5108404302,
+              "duration": 5530206137,
               "status": "passed"
             },
             "line": 10,
@@ -94,25 +94,19 @@
           },
           {
             "result": {
-              "duration": 685585321,
+              "duration": 625832040,
               "status": "passed"
             },
             "line": 11,
-            "name": "I check that I have 1 products in my shopping backet",
+            "name": "I check that I have all products in my shopping backet",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 20
-                }
-              ],
-              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+              "location": "ShoppingBacketSteps.i_check_that_I_have_all_products_in_my_shopping_backet()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4004078178,
+              "duration": 5298645049,
               "status": "passed"
             },
             "line": 12,
@@ -124,7 +118,7 @@
           },
           {
             "result": {
-              "duration": 4706245647,
+              "duration": 4102520660,
               "status": "passed"
             },
             "line": 13,
@@ -136,7 +130,7 @@
           },
           {
             "result": {
-              "duration": 776690886,
+              "duration": 701960734,
               "status": "passed"
             },
             "line": 14,
@@ -148,7 +142,7 @@
           },
           {
             "result": {
-              "duration": 5282178256,
+              "duration": 22817133577,
               "status": "passed"
             },
             "line": 15,
@@ -160,19 +154,13 @@
           },
           {
             "result": {
-              "duration": 633694769,
+              "duration": 647215393,
               "status": "passed"
             },
             "line": 16,
-            "name": "I check that I have 2 products in my shopping backet",
+            "name": "I check that I have all products in my shopping backet",
             "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 20
-                }
-              ],
-              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+              "location": "ShoppingBacketSteps.i_check_that_I_have_all_products_in_my_shopping_backet()"
             },
             "keyword": "And "
           }
@@ -182,7 +170,7 @@
         "before": [
           {
             "result": {
-              "duration": 2704982766,
+              "duration": 2763601250,
               "status": "passed"
             },
             "match": {
@@ -197,7 +185,7 @@
         "after": [
           {
             "result": {
-              "duration": 666107215,
+              "duration": 676133882,
               "status": "passed"
             },
             "match": {
@@ -210,7 +198,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6267826250,
+              "duration": 6312073308,
               "status": "passed"
             },
             "line": 19,
@@ -222,7 +210,7 @@
           },
           {
             "result": {
-              "duration": 12959988150,
+              "duration": 11620573243,
               "status": "passed"
             },
             "line": 20,
@@ -234,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 5484805853,
+              "duration": 5281802031,
               "status": "passed"
             },
             "line": 21,
@@ -246,7 +234,7 @@
           },
           {
             "result": {
-              "duration": 10730799129,
+              "duration": 10765936763,
               "status": "passed"
             },
             "line": 22,
@@ -258,7 +246,7 @@
           },
           {
             "result": {
-              "duration": 5418615048,
+              "duration": 5568186164,
               "status": "passed"
             },
             "line": 23,
@@ -270,25 +258,19 @@
           },
           {
             "result": {
-              "duration": 627250687,
+              "duration": 600889692,
               "status": "passed"
             },
             "line": 24,
-            "name": "I check that I have 1 products in my shopping backet",
+            "name": "I check that I have all products in my shopping backet",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 20
-                }
-              ],
-              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+              "location": "ShoppingBacketSteps.i_check_that_I_have_all_products_in_my_shopping_backet()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4571930297,
+              "duration": 5411044326,
               "status": "passed"
             },
             "line": 25,
@@ -300,7 +282,7 @@
           },
           {
             "result": {
-              "duration": 4426160217,
+              "duration": 3953436500,
               "status": "passed"
             },
             "line": 26,
@@ -312,7 +294,7 @@
           },
           {
             "result": {
-              "duration": 710365159,
+              "duration": 707897185,
               "status": "passed"
             },
             "line": 27,
@@ -324,7 +306,7 @@
           },
           {
             "result": {
-              "duration": 5650472470,
+              "duration": 5218412288,
               "status": "passed"
             },
             "line": 28,
@@ -336,19 +318,13 @@
           },
           {
             "result": {
-              "duration": 1058484145,
+              "duration": 1025593229,
               "status": "passed"
             },
             "line": 29,
-            "name": "I check that I have 2 products in my shopping backet",
+            "name": "I check that I have all products in my shopping backet",
             "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 20
-                }
-              ],
-              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+              "location": "ShoppingBacketSteps.i_check_that_I_have_all_products_in_my_shopping_backet()"
             },
             "keyword": "And "
           }
