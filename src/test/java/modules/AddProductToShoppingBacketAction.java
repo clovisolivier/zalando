@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.exec.ShutdownHookProcessDestroyer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.ProductDetailPage;
-
+import pageobjects.ShoppingBacketPage;
 import models.Product;
 
 
@@ -35,6 +36,8 @@ public class AddProductToShoppingBacketAction {
 		product_list.add(product_storage);
 		
 		clickableElement.click();	
+		
+		ShoppingBacketPage.main_element.isDisplayed();
 		
 
 	}

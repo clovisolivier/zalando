@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3946059902,
+              "duration": 6304761349,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 3,
-        "name": "Add two distincts products to the shopping backet",
+        "line": 5,
+        "name": "Add product twice to the shopping backet",
         "description": "",
-        "id": "add-products-in-the-shopping-basket;add-two-distincts-products-to-the-shopping-backet",
+        "id": "add-products-in-the-shopping-basket;add-product-twice-to-the-shopping-backet",
         "after": [
           {
             "result": {
-              "duration": 1018128309,
+              "duration": 1235037630,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4116141840,
+              "duration": 10040023484,
               "status": "passed"
             },
-            "line": 4,
+            "line": 6,
             "name": "I open zalando website",
             "match": {
               "location": "ProductSelectionSteps.i_open_zalando_website()"
@@ -46,22 +46,22 @@
           },
           {
             "result": {
-              "duration": 6274357246,
+              "duration": 6698917623,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I search sunglass for men by navigation",
+            "line": 7,
+            "name": "I search bag for women by research",
             "match": {
-              "location": "ProductSelectionSteps.i_search_sunglass_for_men_by_navigation()"
+              "location": "ProductSelectionSteps.i_search_bag_for_women_by_navigation()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1668079860,
+              "duration": 5813346638,
               "status": "passed"
             },
-            "line": 6,
+            "line": 8,
             "name": "I select a product in the list",
             "match": {
               "location": "ProductSelectionSteps.i_select_a_product_in_the_list()"
@@ -70,10 +70,10 @@
           },
           {
             "result": {
-              "duration": 328248885,
+              "duration": 746533741,
               "status": "passed"
             },
-            "line": 7,
+            "line": 9,
             "name": "I add this product to the shopping backet",
             "match": {
               "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
@@ -82,10 +82,10 @@
           },
           {
             "result": {
-              "duration": 2309328295,
+              "duration": 5095575019,
               "status": "passed"
             },
-            "line": 8,
+            "line": 10,
             "name": "I go in my shopping backet",
             "match": {
               "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
@@ -94,10 +94,10 @@
           },
           {
             "result": {
-              "duration": 856447405,
+              "duration": 2318164737,
               "status": "passed"
             },
-            "line": 9,
+            "line": 11,
             "name": "I check that I have 1 products in my shopping backet",
             "match": {
               "arguments": [
@@ -112,22 +112,22 @@
           },
           {
             "result": {
-              "duration": 3776613208,
+              "duration": 6025662255,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I search a complement for men by navigation",
+            "line": 12,
+            "name": "I search bag for women by research",
             "match": {
-              "location": "ProductSelectionSteps.i_search_a_complement_for_men_by_navigation()"
+              "location": "ProductSelectionSteps.i_search_bag_for_women_by_navigation()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1104417423,
+              "duration": 4169009979,
               "status": "passed"
             },
-            "line": 11,
+            "line": 13,
             "name": "I select a product in the list",
             "match": {
               "location": "ProductSelectionSteps.i_select_a_product_in_the_list()"
@@ -136,10 +136,10 @@
           },
           {
             "result": {
-              "duration": 765832278,
+              "duration": 716696909,
               "status": "passed"
             },
-            "line": 12,
+            "line": 14,
             "name": "I add this product to the shopping backet",
             "match": {
               "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
@@ -148,10 +148,10 @@
           },
           {
             "result": {
-              "duration": 1808207953,
+              "duration": 3078589542,
               "status": "passed"
             },
-            "line": 13,
+            "line": 15,
             "name": "I go in my shopping backet",
             "match": {
               "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
@@ -160,10 +160,186 @@
           },
           {
             "result": {
-              "duration": 886054562,
+              "duration": 2743032302,
               "status": "passed"
             },
-            "line": 14,
+            "line": 16,
+            "name": "I check that I have 2 products in my shopping backet",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 20
+                }
+              ],
+              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3164587478,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Add two distincts products to the shopping backet",
+        "description": "",
+        "id": "add-products-in-the-shopping-basket;add-two-distincts-products-to-the-shopping-backet",
+        "after": [
+          {
+            "result": {
+              "duration": 702515312,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10418786068,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I open zalando website",
+            "match": {
+              "location": "ProductSelectionSteps.i_open_zalando_website()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14023905632,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I search a complement for men by navigation",
+            "match": {
+              "location": "ProductSelectionSteps.i_search_a_complement_for_men_by_navigation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8379507396,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I select a product in the list",
+            "match": {
+              "location": "ProductSelectionSteps.i_select_a_product_in_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000229813,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I add this product to the shopping backet",
+            "match": {
+              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6515750445,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I go in my shopping backet",
+            "match": {
+              "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2119330818,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I check that I have 1 products in my shopping backet",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 20
+                }
+              ],
+              "location": "ShoppingBacketSteps.i_check_that_I_have_products_in_my_shopping_backet(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7980964365,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I search bag for women by research",
+            "match": {
+              "location": "ProductSelectionSteps.i_search_bag_for_women_by_navigation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5777454175,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I select a product in the list",
+            "match": {
+              "location": "ProductSelectionSteps.i_select_a_product_in_the_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 813880516,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I add this product to the shopping backet",
+            "match": {
+              "location": "ProductSelectionSteps.i_add_this_product_to_the_shopping_backet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5510836408,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I go in my shopping backet",
+            "match": {
+              "location": "ShoppingBacketSteps.i_go_in_my_shopping_backet()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3447130295,
+              "status": "passed"
+            },
+            "line": 29,
             "name": "I check that I have 2 products in my shopping backet",
             "match": {
               "arguments": [
