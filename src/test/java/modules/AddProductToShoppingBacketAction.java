@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.commons.exec.ShutdownHookProcessDestroyer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageobjects.ProductDetailPage;
-import pageobjects.ShoppingBacketPage;
 import models.Product;
+import pageobjects.ProductDetailPage;
 
 
 public class AddProductToShoppingBacketAction {
@@ -26,10 +24,10 @@ public class AddProductToShoppingBacketAction {
 		WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(add_backet_button));
 
 		WebElement product_label = ProductDetailPage.product_label();
-		product_label.isDisplayed();
+		
 		
 		WebElement product_price = ProductDetailPage.product_price();
-		product_price.isDisplayed();
+		
 
 		Product product_storage = new Product(product_label.getText(), product_price.getText());
 		
@@ -37,7 +35,6 @@ public class AddProductToShoppingBacketAction {
 		
 		clickableElement.click();	
 		
-		ShoppingBacketPage.main_element.isDisplayed();
 		
 
 	}

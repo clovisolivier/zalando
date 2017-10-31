@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pageobjects.AutomationHomePage;
-import pageobjects.ProductsCatalogPage;
 
 
 public class ListProductByNavigationAction {
@@ -21,11 +20,7 @@ public class ListProductByNavigationAction {
 		WebElement menu_complements = AutomationHomePage.menu_complements();
 		menu_complements.click();
 		
-		WebElement category_name = ProductsCatalogPage.category_name();
-		category_name.isDisplayed();
-		
-		ProductsCatalogPage.list_product_index(0).isDisplayed();
-		
+	
 		
 		}
 }

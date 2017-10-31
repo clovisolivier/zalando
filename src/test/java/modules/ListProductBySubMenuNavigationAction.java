@@ -30,10 +30,6 @@ public class ListProductBySubMenuNavigationAction {
 		WebElement first_product = ProductsCatalogPage.list_product_index(0);
 		wait.until(ExpectedConditions.elementToBeClickable(first_product));
 		
-		WebElement category_name = ProductsCatalogPage.category_name();
-		category_name.isDisplayed();
-		
-		first_product.isDisplayed();
 		
 		}
 }

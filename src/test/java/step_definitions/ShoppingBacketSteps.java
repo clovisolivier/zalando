@@ -36,7 +36,6 @@ public class ShoppingBacketSteps {
 		Log.info("I go in my shopping backet");
 		
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ShoppingBacketPage.class);
 		
 		ShoppingBacketAction.Execute(driver, datamap);
 	}

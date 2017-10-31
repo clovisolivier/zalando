@@ -49,8 +49,7 @@ public class CheckXDistinctsProductsInShoppingBacketAction {
 			if( selected > 1 ){
 				
 				cumulPrice = stored.price * selected;
-				Log.info("product.price "+product.price+ ", cumul_price "+cumulPrice);
-
+				
 			}else{
 				cumulPrice = stored.price;
 			}

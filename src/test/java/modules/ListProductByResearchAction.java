@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import pageobjects.AutomationHomePage;
-import pageobjects.ProductsCatalogPage;
 
 public class ListProductByResearchAction {
 
@@ -19,11 +18,7 @@ public class ListProductByResearchAction {
 		input_search.sendKeys("Bolsas de aseo");
 		input_search.sendKeys(Keys.ENTER);
 		
-		WebElement category_name = ProductsCatalogPage.category_name();
-		category_name.isDisplayed();
-
-		ProductsCatalogPage.list_product_index(0).isDisplayed();
-			
+		
 		}
 }
  

@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageobjects.ProductDetailPage;
 import pageobjects.ProductsCatalogPage;
 
 
@@ -24,7 +23,6 @@ public class SelectProductAction {
 		
 		firstElement.click();
 		
-		ProductDetailPage.main_element.isDisplayed();
 			
 		}
 }

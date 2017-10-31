@@ -3,7 +3,6 @@ package step_definitions;
 import pageobjects.AutomationHomePage;
 import pageobjects.ProductDetailPage;
 import pageobjects.ProductsCatalogPage;
-import pageobjects.ShoppingBacketPage; 
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +49,6 @@ public class ProductSelectionSteps {
 		Log.info("I search a complement for men by navigation");
 		
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
 		ListProductByNavigationAction.Execute(driver,datamap);
 	}
@@ -59,8 +57,7 @@ public class ProductSelectionSteps {
 	public void i_search_sunglass_for_men_by_navigation() throws Throwable {
 		Log.info("I search sunglass for men by navigation");
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ProductsCatalogPage.class);
-
+		
 		ListProductBySubMenuNavigationAction.Execute(driver,datamap);
 	}
 
@@ -69,7 +66,6 @@ public class ProductSelectionSteps {
 
 		Log.info("I search bag for women by research");
 		PageFactory.initElements(driver, AutomationHomePage.class);
-		PageFactory.initElements(driver, ProductsCatalogPage.class);
 
 		ListProductByResearchAction.Execute(driver,datamap);
 	}
@@ -79,7 +75,6 @@ public class ProductSelectionSteps {
 
 		Log.info("I select a product in the list");
 		PageFactory.initElements(driver, ProductsCatalogPage.class);
-		PageFactory.initElements(driver, ProductDetailPage.class);
 
 		SelectProductAction.Execute(driver,datamap);
 	}
@@ -90,7 +85,6 @@ public class ProductSelectionSteps {
 		Log.info("I add this product to the shopping backet");
 		
 		PageFactory.initElements(driver, ProductDetailPage.class);
-		PageFactory.initElements(driver, ShoppingBacketPage.class);
 
 		AddProductToShoppingBacketAction.Execute(driver,datamap, list_products );
 	}
